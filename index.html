@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="โปรแกรมคำนวณออนไลน์ที่ครอบคลุมการใช้งานมากที่สุด คำนวณคะแนน ลงทุน BMI และอื่นๆ">
+    <meta name="keywords" content="iCalculator, Calculator, คำนวณ, คำนวณออนไลน์, คำนวณเปอร์เซ็นต์ออนไลน์, เครื่องคิดเลข, ลงทุน">
+    <meta name="google-site-verification" content="olYL3LVGLvfy2za7hI3VSaHZn_u8lG5b4zwmBuxqgVY" />
+    <title>iCalculator - โปรแกรมคำนวณออนไลน์</title>
+
+    <!-- Open Graph Meta Tags (Facebook, Twitter, etc.) -->
+    <meta property="og:title" content="iCalculator โปรแกรมคำนวณออนไลน์" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://icalculator.rf.gd" />
+    <meta property="og:image" content="img/thumbnail.jpg">
+
+    <meta property="og:description" content="โปรแกรมคำนวณออนไลน์ที่ครอบคลุมการใช้งานมากที่สุด">
+    <meta name="twitter:title" content="iCalculator โปรแกรมคำนวณออนไลน์">
+    <meta name="twitter:description" content="โปรแกรมคำนวณออนไลน์ที่ครอบคลุมการใช้งานมากที่สุด">
+    <meta name="twitter:image" content="img/thumbnail.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>BMI Calculator</h2>
+
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" placeholder="Enter your weight">
+
+    <label for="height">Height (cm):</label>
+    <input type="number" id="height" placeholder="Enter your height">
+
+    <button onclick="calculateBMI()">Calculate BMI</button>
+
+    <div id="result"></div>
+
+    <script>
+        function calculateBMI() {
+            var weight = document.getElementById("weight").value;
+            var height = document.getElementById("height").value;
+
+            if (weight && height) {
+                var bmi = (weight / ((height / 100) * (height / 100))).toFixed(2);
+                var resultElement = document.getElementById("result");
+                resultElement.innerHTML = "Your BMI is: " + bmi;
+
+                if (bmi < 18.5) {
+                    resultElement.innerHTML += "<br>Underweight";
+                } else if (bmi < 24.9) {
+                    resultElement.innerHTML += "<br>Normal weight";
+                } else if (bmi < 29.9) {
+                    resultElement.innerHTML += "<br>Overweight";
+                } else {
+                    resultElement.innerHTML += "<br>Obesity";
+                }
+            } else {
+                alert("Please enter both weight and height");
+            }
+        }
+    </script>
+
+</body>
+</html>
