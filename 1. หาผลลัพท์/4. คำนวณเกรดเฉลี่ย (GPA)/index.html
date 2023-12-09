@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>คำนวณเกรดเฉลี่ย (GPA)</title>
+</head>
+<body>
+    <div class="container">
+        <h1>คำนวณเกรดเฉลี่ย (GPA)</h1>
+
+        <label for="credits">หน่วยกิต:</label>
+        <input type="number" id="credits" min="0" placeholder="กรอกหน่วยกิต">
+
+        <label for="grade">เกรด:</label>
+        <select id="grade">
+            <option value="4.0">A</option>
+            <option value="3.7">A-</option>
+            <option value="3.3">B+</option>
+            <option value="3.0">B</option>
+            <option value="2.7">B-</option>
+            <option value="2.3">C+</option>
+            <option value="2.0">C</option>
+            <option value="1.7">C-</option>
+            <option value="1.0">D</option>
+            <option value="0.0">F</option>
+        </select>
+
+        <button onclick="addCourse()">เพิ่มรายวิชา</button>
+
+        <h2>รายวิชาทั้งหมด</h2>
+        <ul id="courseList"></ul>
+
+        <button onclick="calculateGPA()">คำนวณ GPA</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>คำนวณเปอร์เซ็นต์การแพ้-ชนะ</title>
+</head>
+<body>
+    <div class="container">
+        <h1>คำนวณเปอร์เซ็นต์การแพ้-ชนะ</h1>
+        <label for="wins">ชนะ (Wins):</label>
+        <input type="number" id="wins" min="0" value="0">
+
+        <label for="losses">แพ้ (Losses):</label>
+        <input type="number" id="losses" min="0" value="0">
+
+        <button onclick="calculatePercentage()">คำนวณ</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
