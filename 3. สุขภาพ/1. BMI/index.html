@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>BMI Calculator</h2>
+
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" placeholder="Enter your weight">
+
+    <label for="height">Height (cm):</label>
+    <input type="number" id="height" placeholder="Enter your height">
+
+    <button onclick="calculateBMI()">Calculate BMI</button>
+
+    <div id="result"></div>
+
+    <script>
+        function calculateBMI() {
+            var weight = document.getElementById("weight").value;
+            var height = document.getElementById("height").value;
+
+            if (weight && height) {
+                var bmi = (weight / ((height / 100) * (height / 100))).toFixed(2);
+                var resultElement = document.getElementById("result");
+                resultElement.innerHTML = "Your BMI is: " + bmi;
+
+                if (bmi < 18.5) {
+                    resultElement.innerHTML += "<br>Underweight";
+                } else if (bmi < 24.9) {
+                    resultElement.innerHTML += "<br>Normal weight";
+                } else if (bmi < 29.9) {
+                    resultElement.innerHTML += "<br>Overweight";
+                } else {
+                    resultElement.innerHTML += "<br>Obesity";
+                }
+            } else {
+                alert("Please enter both weight and height");
+            }
+        }
+    </script>
+
+</body>
+</html>

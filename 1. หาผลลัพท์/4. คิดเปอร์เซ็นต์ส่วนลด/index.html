@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>คิดเปอร์เซ็นต์ส่วนลด</title>
+</head>
+<body>
+    <div class="container">
+        <h1>คิดเปอร์เซ็นต์ส่วนลด</h1>
+        <label for="originalPrice">ราคาเดิม:</label>
+        <input type="number" id="originalPrice" min="0" placeholder="กรอกราคาเดิม">
+
+        <label for="discountPercentage">เปอร์เซ็นต์ส่วนลด:</label>
+        <input type="number" id="discountPercentage" min="0" max="100" placeholder="กรอกเปอร์เซ็นต์ส่วนลด">
+
+        <button onclick="calculateDiscount()">คำนวณ</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

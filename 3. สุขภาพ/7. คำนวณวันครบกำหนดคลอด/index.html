@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Due Date Calculator</title>
+</head>
+<body>
+    <div class="calculator-container">
+        <h2>Due Date Calculator</h2>
+        <div class="input-container">
+            <label for="pregnancyStartDate">Pregnancy Start Date:</label>
+            <input type="date" id="pregnancyStartDate" />
+        </div>
+        <div class="input-container">
+            <label for="pregnancyDuration">Pregnancy Duration (weeks):</label>
+            <input type="number" id="pregnancyDuration" placeholder="Enter pregnancy duration" />
+        </div>
+        <button onclick="calculateDueDate()">Calculate</button>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
