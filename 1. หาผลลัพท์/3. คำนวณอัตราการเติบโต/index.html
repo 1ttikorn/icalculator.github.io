@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>คำนวณอัตราการเติบโต</title>
+</head>
+<body>
+    <div class="container">
+        <h1>คำนวณอัตราการเติบโต</h1>
+        <label for="initialValue">มูลค่าเริ่มต้น:</label>
+        <input type="number" id="initialValue" min="0" placeholder="กรอกมูลค่าเริ่มต้น">
+
+        <label for="finalValue">มูลค่าสุดท้าย:</label>
+        <input type="number" id="finalValue" min="0" placeholder="กรอกมูลค่าสุดท้าย">
+
+        <label for="years">จำนวนปี:</label>
+        <input type="number" id="years" min="0" placeholder="กรอกจำนวนปี">
+
+        <button onclick="calculateGrowthRate()">คำนวณ</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

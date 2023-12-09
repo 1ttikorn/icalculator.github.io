@@ -1,0 +1,49 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa; /* สีพื้นหลัง */
+}
+
+.container {
+  text-align: center;
+  background-color: #ffffff; /* สีพื้นหลังส่วนที่ใส่ข้อมูล */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px; /* ระยะห่างของ Label */
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px; /* ระยะห่างของ Input */
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#result {
+  margin-top: 30px; /* ระยะห่างของผลลัพธ์ */
+  font-weight: bold;
+  font-size: 18px; /* ขนาดตัวอักษรของผลลัพธ์ */
+}
